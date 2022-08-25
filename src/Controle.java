@@ -1,10 +1,10 @@
 import java.util.ArrayList;
 
-public class Ansiogenico {
+public class Controle {
 
-    private static final double[] probabilidades = {1.0, 0.36, 0.47, 0.48, 0.45, 0.29, 0.47, 0.48, 0.50, 0.57, 1.0};
+    private static final double[] probabilidades = {1.0, 0.32, 0.46, 0.45, 0.46, 0.30, 0.42, 0.48, 0.49, 0.55, 1.0};
 
-    public static int[][] ansiogenico(int iteracoes, int[] estados, int[][] matrizPassosAnsiogenico) {
+    public static int[][] controle(int iteracoes, int[] estados, int[][] matrizPassosAnsiogenico) {
 
         for (int iteracao = 0; iteracao < iteracoes; iteracao++){
 
@@ -116,7 +116,7 @@ public class Ansiogenico {
             }
         }
 
-        System.out.println("\n\t\t\t\t ANSIOGÊNICO");
+        System.out.println("\n\t\t\t\t CONTROLE");
         System.out.println("ESTADOS \t TEMPO MÉDIO DE PRIMEIRA VISITA");
         for (int i = 0; i < somas.length; i++) {
             if (i != 5) {
@@ -127,4 +127,5 @@ public class Ansiogenico {
             System.out.printf("%d \t\t\t %.2f\n",i+1, medias[i]);
         }
     }
+
 }
